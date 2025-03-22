@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清言AI | Gemini 2.0 Flash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-dark.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/marked/4.0.2/marked.min.js"></script>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/highlight.js/11.4.0/highlight.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="model-info">
+                    <div class="model-name">清言AI</div>
+                    <div class="model-version">Powered by Gemini 2.0 Flash</div>
+                </div>
+            </div>
+            <button id="new-chat" class="new-chat-btn">
+                <i class="ri-add-line"></i> 新建对话
+            </button>
+            
+            <!-- 添加模型说明提示 -->
+            <div class="model-notice">
+                <div class="notice-header">
+                    <i class="ri-information-line"></i>
+                    <span>说明</span>
+                </div>
+                <p>感谢您对清言AI与Gemini模型的喜爱，但是由于中国大陆的网络政策限制原因，Google在中国大陆地区无法访问，我们不得不使用代理服务器来帮助您访问此模型，这会导致模型的输出变卡顿，长时间加载无响应请您稍作等待或尝试刷新页面。</p>
+            </div>
+            
+            <div class="footer">
+                <span>今天是 <a href="#" id="current-date"></a></span>
+            </div>
+        </div>
+        <div class="main">
+            <div id="chat-container" class="chat-container">
+                <div class="welcome-message">
+                    <h2>欢迎使用 <span class="gradient-text">清言AI</span></h2>
+                    <p>清言AI 支持 Google Gemini 2.0 Flash 模型，让您体验流畅智能的对话。</p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="ri-brain-line"></i>
+                            <span>强大的推理能力</span>
+                        </div>
+                        <div class="feature">
+                            <i class="ri-message-3-line"></i>
+                            <span>自然流畅对话</span>
+                        </div>
+                        <div class="feature">
+                            <i class="ri-image-line"></i>
+                            <span>图像理解能力</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 聊天消息会在这里动态添加 -->
+            </div>
+            <div class="input-container">
+                <textarea id="user-input" placeholder="输入您的问题..." rows="1"></textarea>
+                <div class="input-buttons">
+                    <button id="upload-btn" class="upload-btn" title="上传图片">
+                        <i class="ri-image-add-line"></i>
+                    </button>
+                    <input type="file" id="image-upload" accept="image/*" style="display: none;">
+                    <button id="send-btn" class="send-btn">
+                        <i class="ri-send-plane-fill"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="ri-sun-line"></i>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
